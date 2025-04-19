@@ -15,42 +15,26 @@ using namespace std;
 
 int main() {
 
-    int quarters;
-    int dimes;
-    int nickels;
-    int pennies;
-    int dollars;
-    int cents;
-    int total_cents;
-    int remaining_cents;
-
+    int quarters, dimes, nickels, pennies, dollars, cents, total_cents;
+  
     cout<<"Please enter your amount in the form of dollars and cents separated by a space: " <<endl;
     cin>> dollars;
     cin>>cents;
 
     total_cents = dollars*100 + cents;
-    // cout<<"Total cents equals: " << total_cents << endl;
-
+    
     quarters = total_cents / 25;
-    // cout<< "Quarters equal: " << quarters;
+    total_cents = total_cents - (quarters*25);
+   
+    dimes = total_cents/10;
+    total_cents = total_cents - (dimes*10);
+    
 
-    remaining_cents = total_cents - (quarters*25);
-    // cout<< "Remaining cents is: " << remaining_cents;
-
-
-    dimes = remaining_cents/10;
-    // cout<< "Dimes equal: " << dimes << endl;
-    remaining_cents = remaining_cents - (dimes*10);
-    // cout<< "Remaining cents is: " << remaining_cents;
-
-    nickels = remaining_cents/5;
-    // cout<<"Nickels equal: " << nickels <<endl;
-    remaining_cents = remaining_cents - (nickels*5);
-    // cout<< "Remaining cents is: " << remaining_cents;
-
-    pennies = remaining_cents;
-    // cout<<"Pennies equal: " << pennies << endl;
-
+    nickels = total_cents/5;
+    total_cents = total_cents - (nickels*5);
+    
+    pennies = total_cents;
+   
     cout << dollars << " dollars and " << cents << " cents are: ";
     cout << quarters << " quarters, " << dimes << " dimes, " << nickels << " nickels and " << pennies << " pennies" << endl;
 
