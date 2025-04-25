@@ -1,7 +1,7 @@
 /*Question	4:
-Write	a	program	that	reads	from	the	user	two	positive	integers,	and	prints	the	result	of	
+Write	a	program	that	reads	from	the	user	two	positive	integers,	and	prints	the	result	of
 when we add, subtract	multiply,	divide, div and	mod	them.
-Your	program	should	interact	with	the	user	exactly	as	it	shows	in	the	following	example:	
+Your	program	should	interact	with	the	user	exactly	as	it	shows	in	the	following	example:
 Please enter two positive integers,	separated by	a	space:
 14 4
 14 + 4 = 18
@@ -15,7 +15,8 @@ Please enter two positive integers,	separated by	a	space:
 #include <iomanip>
 using namespace std;
 
-int main() {
+int main()
+{
 
     double add, subtract, multiply, divide, mod;
     int int1, int2;
@@ -32,14 +33,11 @@ int main() {
     multiply = int1 * int2;
     cout << int1 << " * " << int2 << " = " << multiply << endl;
 
-
-   
-    divide = double(int1)/ int2;
+    divide = double(int1) / int2;
     cout << int1 << " / " << int2 << " = " << divide << endl;
 
     mod = int1 % int2;
     cout << int1 << " mod " << int2 << " = " << mod << endl;
-
 
     return 0;
 }
